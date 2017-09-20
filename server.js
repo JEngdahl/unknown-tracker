@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 //const config = require('./config')
+console.log(process.env.consumerKey)
 let Twitter = require('twitter-node-client').Twitter;
 let twitter = new Twitter(
   {
