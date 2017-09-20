@@ -38,4 +38,4 @@ console.log(locations)
     })(marker, i));
   }
 })
-}
+})
