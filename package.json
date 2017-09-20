@@ -1,0 +1,19 @@
+{
+  "name": "unknownmap",
+  "version": "1.0.0",
+  "description": "unknownmap",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "moment": "^2.18.1",
+    "require": "^2.4.20",
+    "twitter-js-client": "0.0.5",
+    "twitter-node-client": "0.0.6"
+  }
+}
