@@ -10,6 +10,7 @@ let twitter = new Twitter(
       	"accessTokenSecret": process.env.consumerKey ||"abGXjaUqN0va7glQVYCWv6lQzV1wWg6mqULmr3LLlrtov"
       }
 );
+
 let port = process.env.PORT || 1337
 var moment = require('moment');
 console.log(moment().format("ddd MMM D  ZZ YYYY"));
@@ -20,6 +21,22 @@ var error = function (err, response, body) {
 var success = function (data) {
   console.log('Data:  ', data);
 };
+
+app.use(function (req, res, next) {
+
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET');
+
+    // Request headers you wish to allow
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+
+    // Pass to next layer of middleware
+    next();
+});
 
 // twitter.getUserTimeline({ screen_name: 'UnownBot', count: '10'}, error, function(data){
 //   data = JSON.parse(data)
