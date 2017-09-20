@@ -32,7 +32,7 @@ console.log(locations)
 
     google.maps.event.addListener(marker, 'click', (function(marker, i) {
       return function() {
-        infowindow.setContent(locations[i][0]);
+        infowindow.setContent(locations[i][0]+locations[i][4]);
         infowindow.open(map, marker);
       }
     })(marker, i));

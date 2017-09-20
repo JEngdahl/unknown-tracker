@@ -56,7 +56,7 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname+'/index.html')
 })
 app.get('/data', function (req, res) {
-  twitter.getUserTimeline({ screen_name: 'UnownBot', count: '15'}, error, function(data){
+  twitter.getUserTimeline({ screen_name: 'UnownBot', count: '200'}, error, function(data){
     var hold = []
     var formedData = JSON.parse(data)
     // console.log(JSON.parse(data))
@@ -68,7 +68,7 @@ app.get('/data', function (req, res) {
     formedData.forEach(function(e,i){
       let split = e.text.split('\n')
       console.log(split)
-      let out = [split[0]+split[1], split[3].split(',')[0] , split[3].split(',')[1], i]
+      let out = [split[0]+split[1], split[3].split(',')[0] , split[3].split(',')[1], i, e.created_at]
       // hold.push({
       //   createdAt: e.created_at,
       //   data : e.text.split('\n')
