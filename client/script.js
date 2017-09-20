@@ -1,20 +1,8 @@
-// var Twitter = require('twitter-node-client').Twitter;
-// var twitter = new Twitter(config);
-//
-// //Example calls
-// var error = function (err, response, body) {
-//   console.log('ERROR [%s]', err);
-// };
-// var success = function (data) {
-//   console.log('Data [%s]', data);
-// };
-//
-// twitter.getUserTimeline({ screen_name: 'UnownBot', count: '10'}, error, success);
 
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "http://localhost:1337/data",
+  "url": "http://unknownmap.herokuapp.com/data",
   "method": "GET",
 }
 
@@ -50,13 +38,3 @@ console.log(locations)
     })(marker, i));
   }
 })
-
-
-
-// var locations = [
-//       ['Bondi Beach', -33.890542, 151.274856, 4],
-//       ['Coogee Beach', -33.923036, 151.259052, 5],
-//       ['Cronulla Beach', -34.028249, 151.157507, 3],
-//       ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-//       ['Maroubra Beach', -33.950198, 151.259302, 1]
-//     ];
