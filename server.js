@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
 //const config = require('./config')
-// console.log(process.env.consumerKey)
-// console.log(process.env.consumerKey)
-// console.log(process.env.consumerKey)
-// console.log(process.env.consumerKey)
+console.log(process.env.consumerKey)
+console.log(process.env.consumerSecret)
+console.log(process.env.accessToken)
+console.log(process.env.accessTokenSecret)
 let Twitter = require('twitter-node-client').Twitter;
 let twitter = new Twitter(
   {

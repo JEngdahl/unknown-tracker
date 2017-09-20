@@ -2,7 +2,7 @@ $(document).ready(function(){
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "http://localhost:1337/data",
+  "url": "https://unknowntracker.herokuapp.com/data",
   "method": "GET",
 }
 
