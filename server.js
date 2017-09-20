@@ -1,14 +1,17 @@
 const express = require('express')
 const app = express()
 //const config = require('./config')
-console.log(process.env.consumerKey)
+// console.log(process.env.consumerKey)
+// console.log(process.env.consumerKey)
+// console.log(process.env.consumerKey)
+// console.log(process.env.consumerKey)
 let Twitter = require('twitter-node-client').Twitter;
 let twitter = new Twitter(
   {
       	"consumerKey": process.env.consumerKey ,
-      	"consumerSecret": process.env.consumerKey ,
-      	"accessToken": process.env.consumerKey ,
-      	"accessTokenSecret": process.env.consumerKey
+      	"consumerSecret": process.env.consumerSecret ,
+      	"accessToken": process.env.accessToken ,
+      	"accessTokenSecret": process.env.accessTokenSecret
       }
 );
 
