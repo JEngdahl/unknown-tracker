@@ -1,8 +1,8 @@
-
+$( document ).ready(function() {
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://unknownmap.herokuapp.com/data",
+  "url": "http://localhost:1337/data",
   "method": "GET",
 }
 
@@ -38,3 +38,4 @@ console.log(locations)
     })(marker, i));
   }
 })
+}
