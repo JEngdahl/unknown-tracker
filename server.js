@@ -1,8 +1,15 @@
 const express = require('express')
 const app = express()
-const config = require('./config')
+//const config = require('./config')
 let Twitter = require('twitter-node-client').Twitter;
-let twitter = new Twitter(config);
+let twitter = new Twitter(
+  {
+      	"consumerKey": process.env.consumerKey,
+      	"consumerSecret": process.env.consumerKey,
+      	"accessToken": process.env.consumerKey,
+      	"accessTokenSecret": process.env.consumerKey,
+    }
+);
 let port = process.env.PORT || 1337
 var moment = require('moment');
 console.log(moment().format("ddd MMM D  ZZ YYYY"));
