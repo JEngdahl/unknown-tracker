@@ -4,11 +4,11 @@ const app = express()
 let Twitter = require('twitter-node-client').Twitter;
 let twitter = new Twitter(
   {
-      	"consumerKey": process.env.consumerKey,
-      	"consumerSecret": process.env.consumerKey,
-      	"accessToken": process.env.consumerKey,
-      	"accessTokenSecret": process.env.consumerKey,
-    }
+      	"consumerKey": process.env.consumerKey || "cnZF1VmsiopIojTYksUJJcgYy",
+      	"consumerSecret": process.env.consumerKey ||"ZmGF3uHaLrr5UbQbU6MtoeXU7ArjCur5FsKM8tzdWXaLL61y6M",
+      	"accessToken": process.env.consumerKey ||"418122890-jkOhaJvzMdC4Q1iRdzRHZqX69GsVdHp2mZ5iMMdR",
+      	"accessTokenSecret": process.env.consumerKey ||"abGXjaUqN0va7glQVYCWv6lQzV1wWg6mqULmr3LLlrtov"
+      }
 );
 let port = process.env.PORT || 1337
 var moment = require('moment');

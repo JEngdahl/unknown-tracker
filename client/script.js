@@ -2,7 +2,7 @@
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "http://unknownmap.herokuapp.com/data",
+  "url": "http://localhost:1337/data",
   "method": "GET",
 }
 
